@@ -4,8 +4,8 @@ exports.up = function(knex, Promise) {
         table.increments()
         table.string('title')
         table.string('genre')
-        table.string('description')
-        table.string('coverURL')
+        table.string('description', 500)
+        table.string('coverURL', 250)
     })
 };
 

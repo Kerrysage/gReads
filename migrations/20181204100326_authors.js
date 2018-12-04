@@ -2,9 +2,10 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('authors', function (table) {
         table.increments()
-        table.string('name')
-        table.integer('height')
-        table.integer('mass')
+        table.string('firstName')
+        table.string('lastName')
+        table.string('biography', 1000)
+        table.string('portraitURL', 500)
     })
 };
 

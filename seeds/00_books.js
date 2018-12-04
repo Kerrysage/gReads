@@ -1,10 +1,10 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('books').del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
+      return knex('books').insert([
         {id: 1, title: 'Python in A Nutshell', genre: 'Python', description: 'This book offers Python programmers one place to look when they need help remembering or deciphering the syntax of this open source language and its many powerful but scantily documented modules. This comprehensive reference guide makes it easy to look up the most frequently needed information--not just about the Python language itself, but also the most frequently used parts of the standard library and the most important third-party extensions.', coverURL: 'https://covers.oreillystatic.com/images/0636920012610/lrg.jpg'},
         {id: 2, title: 'Think Python', genre: 'Python', description: '"If you want to learn how to program, working with Python is an excellent way to start. This hands-on guide takes you through the language a step at a time, beginning with basic programming concepts before moving on to functions, recursion, data structures, and object-oriented design. This second edition and its supporting code have been updated for Python 3.', coverURL: 'https://covers.oreillystatic.com/images/0636920025696/lrg.jpg'},
         {id: 3, title: 'Learning React Native', genre: 'JavaScript', description: 'Get a practical introduction to React Native, the JavaScript framework for writing and deploying fully featured mobile apps that look and feel native. With this hands-on guide, you’ll learn how to build applications that target iOS, Android, and other mobile platforms instead of browsers. You’ll also discover how to access platform features such as the camera, user location, and local storage.', coverURL: 'https://covers.oreillystatic.com/images/0636920085270/lrg.jpg'},
