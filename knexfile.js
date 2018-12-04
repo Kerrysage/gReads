@@ -4,16 +4,11 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: {
-      connection: 'postgres://localhost/[gREADSdb]'
-    }
-  },
+    connection: 'postgres://localhost/gREADSdb'
+    },
 
   production: {
-    client: 'postgresql',
-    connection: {
-      connection: process.env.DATABASE_URL + '?ssl=true'
+    client: 'pg',
+    connection:  process.env.DATABASE_URL + '?ssl=true'
     }
-
   }
-}
